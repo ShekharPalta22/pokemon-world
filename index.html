@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon World - The Ultimate Pokemon Hub</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔴</text></svg>">
+</head>
+<body>
+    <div id="app">
+        <!-- Pokeball Loading Screen -->
+        <div id="loading-screen" class="loading-screen">
+            <div class="pokeball-loader">
+                <div class="pokeball">
+                    <div class="pokeball-top"></div>
+                    <div class="pokeball-center">
+                        <div class="pokeball-button"></div>
+                    </div>
+                    <div class="pokeball-bottom"></div>
+                </div>
+                <p class="loading-text">Loading Pokemon World...</p>
+            </div>
+        </div>
+
+        <!-- Animated Background -->
+        <div class="animated-bg">
+            <div class="floating-pokeball fb-1"></div>
+            <div class="floating-pokeball fb-2"></div>
+            <div class="floating-pokeball fb-3"></div>
+            <div class="floating-pokeball fb-4"></div>
+            <div class="floating-pokeball fb-5"></div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <a href="#" class="nav-logo" data-page="home">
+                    <span class="logo-icon">🔴</span>
+                    <span class="logo-text">Pokemon World</span>
+                </a>
+                <div class="nav-links" id="nav-links">
+                    <a href="#" class="nav-link active" data-page="home">Home</a>
+                    <a href="#" class="nav-link" data-page="pokedex">Pokedex</a>
+                    <a href="#" class="nav-link" data-page="cards">Card Shop</a>
+                    <a href="#" class="nav-link" data-page="world">World</a>
+                    <a href="#" class="nav-link" data-page="trainer">Trainer</a>
+                    <a href="#" class="nav-link" data-page="news">News</a>
+                    <a href="#" class="nav-link" data-page="daily">Daily</a>
+                    <a href="#" class="nav-link" data-page="games">Games</a>
+                    <a href="#" class="nav-link" data-page="adventure">POKEMON!</a>
+                </div>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main id="main-content" class="main-content"></main>
+
+        <!-- Professor Oak AI Widget -->
+        <div class="oak-widget" id="oak-widget">
+            <button class="oak-toggle" id="oak-toggle">
+                <span class="oak-toggle-icon">🧑‍🔬</span>
+                <span class="oak-toggle-text">Prof. Oak</span>
+            </button>
+            <div class="oak-window" id="oak-window">
+                <div class="oak-header">
+                    <div class="oak-header-info">
+                        <span class="oak-avatar">🧑‍🔬</span>
+                        <div>
+                            <h3>Professor Oak AI</h3>
+                            <span class="oak-status">Ask me anything!</span>
+                        </div>
+                    </div>
+                    <button class="oak-close" id="oak-close">&times;</button>
+                </div>
+                <div class="oak-messages" id="oak-messages">
+                    <div class="oak-message bot">
+                        <span class="oak-msg-avatar">🧑‍🔬</span>
+                        <div class="oak-msg-content">Hello there! I'm Professor Oak. Ask me anything about Pokemon — types, stats, strategies, cards, you name it!</div>
+                    </div>
+                </div>
+                <div class="oak-input-area">
+                    <input type="text" class="oak-input" id="oak-input" placeholder="Ask about any Pokemon...">
+                    <button class="oak-send" id="oak-send">➤</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pokemon TCG Pocket Widget -->
+        <div class="chat-widget" id="chat-widget">
+            <button class="chat-toggle" id="chat-toggle">
+                <span class="chat-toggle-icon">🃏</span>
+                <span class="chat-toggle-text">TCG Pocket</span>
+            </button>
+            <div class="chat-window" id="chat-window">
+                <div class="chat-header" style="background: linear-gradient(135deg, #e63946, #f4a261);">
+                    <div class="chat-header-info">
+                        <span class="chat-avatar">🃏</span>
+                        <div>
+                            <h3>TCG Pocket</h3>
+                            <span class="chat-status" id="tcg-coins">0 coins</span>
+                        </div>
+                    </div>
+                    <button class="chat-close" id="chat-close">&times;</button>
+                </div>
+                <div class="tcg-content" id="tcg-content"></div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer" id="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🔴 Pokemon World</h3>
+                    <p>The ultimate Pokemon hub for fans, collectors, and competitive players.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Explore</h4>
+                    <a href="#" data-page="pokedex">Pokedex</a>
+                    <a href="#" data-page="cards">Card Shop</a>
+                    <a href="#" data-page="world">World Map</a>
+                    <a href="#" data-page="trainer">Trainer Academy</a>
+                </div>
+                <div class="footer-section">
+                    <h4>More</h4>
+                    <a href="#" data-page="news">News & Updates</a>
+                    <a href="#" data-page="daily">Pokemon of the Day</a>
+                    <a href="#" data-page="games">Games & Tools</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <p>Built with ❤️ for Pokemon fans</p>
+                    <p>Data from PokeAPI & Pokemon TCG API</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Pokemon World &copy; 2026 | Pokemon is a trademark of Nintendo/Game Freak/Creatures</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Page Templates -->
+    <script src="js/data.js"></script>
+    <script src="js/pokemon-data.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/pages.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/games.js"></script>
+    <script src="js/adventure.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
