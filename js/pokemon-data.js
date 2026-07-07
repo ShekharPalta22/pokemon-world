@@ -330,7 +330,9 @@ const POKEMON_DB = [
 [1015,"munkidori",["poison","psychic"],[88,75,66,130,90,106],1.0,12.2,["toxic chain"],"Its psychic power has been amplified by Pecharunt's toxic influence."],
 [1016,"fezandipiti",["poison","fairy"],[88,91,82,70,125,99],1.4,30.1,["toxic chain"],"Its beauty and charm are enhanced by Pecharunt's toxic chains."],
 // Mega Lucario (special form)
-[10448,"mega-lucario",["fighting","steel"],[70,145,88,140,70,112],1.3,57.5,["adaptability"],"By reading auras, it can sense the feelings of creatures over half a mile away. Its Mega Evolution amplifies its aura to incredible levels."],
+[10059,"mega-lucario",["fighting","steel"],[70,145,88,140,70,112],1.3,57.5,["adaptability"],"By reading auras, it can sense the feelings of creatures over half a mile away. Its Mega Evolution amplifies its aura to incredible levels."],
+// Mega Pidgeot (special form)
+[10073,"mega-pidgeot",["normal","flying"],[83,80,80,135,80,121],2.2,50.5,["no guard"],"Its Mega Evolution grants it hyper-acute vision, letting it spot even a single tiny bug from 6.2 miles up in the sky."],
 
 // Additional popular Pokemon from various gens
 [169,"crobat",["poison","flying"],[85,90,80,70,80,130],1.8,75.0,["inner focus"],"It flies so silently through the dark on its four wings that it may not be noticed even when nearby."],
@@ -401,7 +403,7 @@ const EVOLUTION_CHAINS = {
     squirtle: [{name:'squirtle',id:7},{name:'wartortle',id:8},{name:'blastoise',id:9}],
     caterpie: [{name:'caterpie',id:10},{name:'metapod',id:11},{name:'butterfree',id:12}],
     weedle: [{name:'weedle',id:13},{name:'kakuna',id:14},{name:'beedrill',id:15}],
-    pidgey: [{name:'pidgey',id:16},{name:'pidgeotto',id:17},{name:'pidgeot',id:18}],
+    pidgey: [{name:'pidgey',id:16},{name:'pidgeotto',id:17},{name:'pidgeot',id:18},{name:'mega-pidgeot',id:10073}],
     rattata: [{name:'rattata',id:19},{name:'raticate',id:20}],
     spearow: [{name:'spearow',id:21},{name:'fearow',id:22}],
     ekans: [{name:'ekans',id:23},{name:'arbok',id:24}],
@@ -485,7 +487,7 @@ const EVOLUTION_CHAINS = {
     cetoddle: [{name:'cetoddle',id:974},{name:'cetitan',id:975}],
     gimmighoul: [{name:'gimmighoul',id:999},{name:'gholdengo',id:1000}],
     arctibax: [{name:'arctibax',id:997},{name:'baxcalibur',id:998}],
-    riolu: [{name:'riolu',id:447},{name:'lucario',id:448},{name:'mega-lucario',id:10448}],
+    riolu: [{name:'riolu',id:447},{name:'lucario',id:448},{name:'mega-lucario',id:10059}],
 };
 
 // Link evolutions to all members
