@@ -255,6 +255,16 @@ function toggleShiny(id) {
     btn.classList.toggle('active', isShiny);
 }
 
+let isDynamax = false;
+function toggleDynamax() {
+    isDynamax = !isDynamax;
+    const container = document.getElementById('detail-image-container');
+    const btn = document.getElementById('dynamax-btn');
+    container.classList.toggle('dynamax-active', isDynamax);
+    btn.classList.toggle('active', isDynamax);
+    btn.textContent = isDynamax ? '🔴 Dynamaxed!' : '🔴 Dynamax';
+}
+
 /* === FEATURED POKEMON (Home) === */
 async function loadFeaturedPokemon() {
     const featured = [25, 6, 150, 149, 143, 130, 94, 131, 133, 248, 384, 445];

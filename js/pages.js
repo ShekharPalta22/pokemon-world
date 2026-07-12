@@ -114,9 +114,10 @@ function renderPokemonDetail(pokemon, species, evoData, localEvos) {
         <button class="back-btn" onclick="navigateTo('pokedex')">← Back to Pokedex</button>
         ${categoryBadge}
         <div class="detail-header">
-            <div class="detail-image-container">
+            <div class="detail-image-container" id="detail-image-container">
                 <img id="detail-pokemon-img" src="${pokemonImageUrl(pokemon.id)}" alt="${pokemon.name}" onerror="this.src='${pokemonSpriteUrl(pokemon.id)}'">
                 <button class="shiny-toggle" id="shiny-btn" onclick="toggleShiny(${pokemon.id})">✨ Shiny</button>
+                ${pokemon.id < 10000 ? `<button class="dynamax-toggle" id="dynamax-btn" onclick="toggleDynamax()">🔴 Dynamax</button>` : ''}
             </div>
             <div class="detail-info">
                 <div class="pokemon-number">#${String(pokemon.id).padStart(4, '0')}</div>
