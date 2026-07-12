@@ -32,13 +32,11 @@ async function fetchJSON(url) {
 }
 
 function pokemonImageUrl(id) {
-    const spriteId = id >= 10000 ? id % 10000 : id;
-    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${spriteId}.png`;
+    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
 }
 
 function pokemonSpriteUrl(id) {
-    const spriteId = id >= 10000 ? id % 10000 : id;
-    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${spriteId}.png`;
+    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
 }
 
 function pokemonShinyUrl(id) {

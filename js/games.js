@@ -402,7 +402,7 @@ function shuffleArray(arr) {
 function renderPokemonCard(id, name, types) {
     return `
         <div class="pokemon-card animate-in" onclick="showPokemonDetail(${id})">
-            <div class="pokemon-number">#${String(id >= 10000 ? id % 10000 : id).padStart(4, '0')}</div>
+            <div class="pokemon-number">#${String(id).padStart(4, '0')}</div>
             <img src="${pokemonImageUrl(id)}" alt="${name}" loading="lazy" onerror="this.src='${pokemonSpriteUrl(id)}'">
             <div class="pokemon-name">${id >= 10000 ? '✨ ' : ''}${name}</div>
             <div class="types">

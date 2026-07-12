@@ -218,8 +218,7 @@ const POGO = {
    ============================================ */
 
 function spriteUrl(id) {
-    const spriteId = id >= 10000 ? id % 10000 : id;
-    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${spriteId}.png`;
+    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
 }
 
 function renderAdventure() {
